@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_typography.dart';
+import '../../../../rumi/rumi.dart';
 
 /// ホーム画面
 class HomeScreen extends StatelessWidget {
@@ -55,25 +56,22 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 32),
 
-              // Rumi エリア（プレースホルダー）
+              // Rumi エリア
               Expanded(
                 flex: 2,
                 child: Center(
-                  child: Container(
-                    width: 200,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      color: AppColors.foggyBlue,
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Rumi',
-                        style: AppTypography.headlineMedium.copyWith(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Rumi(size: 180, mood: RumiMood.happy),
+                      const SizedBox(height: 16),
+                      Text(
+                        'いい感じ。今日もゆっくりね。',
+                        style: AppTypography.bodyMedium.copyWith(
                           color: AppColors.greige,
                         ),
                       ),
-                    ),
+                    ],
                   ),
                 ),
               ),
