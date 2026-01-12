@@ -96,9 +96,10 @@
 
 ### 1.8 コードエディタ「Canvas」(Week 8-10)
 
-- [ ] 基本エディタ UI
-- [ ] シンタックスハイライト (低コントラスト)
-- [ ] Python コード実行環境
+- [x] Canvas エディタ画面 (`canvas_screen.dart`)
+- [x] Python 実行サービス (`python_executor.dart`)
+- [x] Pyodide 統合 (Web) (`index.html`)
+- [x] シンプルな Python シミュレーション (ネイティブ)実行環境
 - [ ] エラー表示 (やさしいトーン)
 - [ ] Rumi によるヒント表示
 
