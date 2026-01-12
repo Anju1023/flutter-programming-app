@@ -14,16 +14,16 @@
 
 ### 1.1 プロジェクトセットアップ (Week 1)
 
-- [ ] Flutter プロジェクト初期化
-- [ ] ディレクトリ構造の設計
-- [ ] 依存パッケージのセットアップ
-  - [ ] Riverpod 3.1.0
-  - [ ] Isar 3.x
-  - [ ] go_router
-  - [ ] google_fonts
-  - [ ] flutter_animate
-- [ ] コード規約・リンターの設定
-- [ ] Git リポジトリ・CI/CD の設定
+- [x] Flutter プロジェクト初期化
+- [x] ディレクトリ構造の設計
+- [x] 依存パッケージのセットアップ
+  - [x] Riverpod (flutter_riverpod)
+  - [x] Hive (isar から変更)
+  - [x] go_router
+  - [x] google_fonts
+  - [x] flutter_animate
+- [x] コード規約・リンターの設定
+- [x] Git リポジトリ初期化
 
 ### 1.2 デザインシステム実装 (Week 1-2)
 
