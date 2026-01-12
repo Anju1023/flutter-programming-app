@@ -86,12 +86,13 @@
 
 ### 1.7 学習フロー画面実装 (Week 6-8)
 
-- [ ] ストーリー画面 (導入テキスト)
-- [ ] ガイド画面 (ビジュアル解説)
-- [ ] クイズ画面 (選択問題)
-- [ ] ワーク画面 (コーディング)
-- [ ] 完了画面 (ハンコ風アニメーション)
-- [ ] 進捗管理ロジック
+- [x] ストーリー画面 (`story_screen.dart`)
+- [x] ガイド画面 (`guide_screen.dart`)
+- [x] クイズ画面 (`quiz_screen.dart`)
+- [x] ワーク画面 (`work_screen.dart`)
+  - [x] 簡易 Python シミュレーター
+- [x] `AppTypography.code` 追加
+- [x] `AppColors.warmBeige` 追加
 
 ### 1.8 コードエディタ「Canvas」(Week 8-10)
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!--
+	<head>
+		<!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
 
@@ -14,25 +14,66 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="$FLUTTER_BASE_HREF">
+		<base href="$FLUTTER_BASE_HREF" />
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+		<meta charset="UTF-8" />
+		<meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+		<meta name="description" content="A new Flutter project." />
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="moku">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+		<!-- iOS meta tags & icons -->
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="moku" />
+		<link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>moku</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+		<title>moku</title>
+		<link rel="manifest" href="manifest.json" />
+	</head>
+	<body>
+		<!-- Pyodide - Python in Browser -->
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+		<script>
+			// Pyodide インスタンス
+			let pyodide = null;
+
+			// Pyodide をロード
+			async function loadPyodide() {
+				if (pyodide) return pyodide;
+				console.log('Loading Pyodide...');
+				pyodide = await loadPyodide();
+				console.log('Pyodide loaded!');
+				return pyodide;
+			}
+
+			// Python コードを実行
+			async function runPython(code) {
+				try {
+					if (!pyodide) {
+						await loadPyodide();
+					}
+
+					// stdout をキャプチャ
+					pyodide.runPython(`
+import sys
+from io import StringIO
+sys.stdout = StringIO()
+        `);
+
+					// ユーザーコードを実行
+					pyodide.runPython(code);
+
+					// 出力を取得
+					const output = pyodide.runPython('sys.stdout.getvalue()');
+
+					return { output: output.trim(), error: '' };
+				} catch (error) {
+					return { output: '', error: error.message };
+				}
+			}
+		</script>
+		<script src="flutter_bootstrap.js" async></script>
+	</body>
 </html>
