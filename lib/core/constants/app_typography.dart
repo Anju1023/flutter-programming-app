@@ -95,4 +95,20 @@ class AppTypography {
     fontWeight: FontWeight.normal,
     height: 1.4,
   );
+
+  // ========== CODE ==========
+
+  /// コード - 14px Monospace
+  static TextStyle get code => GoogleFonts.jetBrainsMono(
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    height: 1.6,
+  );
+
+  /// コード小 - 12px Monospace
+  static TextStyle get codeSmall => GoogleFonts.jetBrainsMono(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    height: 1.5,
+  );
 }

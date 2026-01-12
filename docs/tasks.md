@@ -75,13 +75,14 @@
 
 ### 1.6 学習コンテンツ基盤 (Week 4-6)
 
-- [ ] データモデル設計
-  - [ ] コース
-  - [ ] レッスン
-  - [ ] ストーリー/ガイド/クイズ/ワーク
-- [ ] Supabase データベーススキーマ作成
-- [ ] コンテンツ取得 API 実装
-- [ ] ローカルキャッシュ (Isar)
+- [x] データモデル設計 (`content_models.dart`)
+  - [x] Course / Unit / Lesson / LessonStep
+  - [x] StoryContent / GuideContent / QuizContent / WorkContent
+- [x] Freezed によるイミュータブルモデル
+- [x] サンプルコンテンツ (`sample_content.dart`)
+  - [x] Python 基礎コース（4 レッスン）
+- [x] ContentRepository 実装
+- [x] Riverpod プロバイダー
 
 ### 1.7 学習フロー画面実装 (Week 6-8)
 

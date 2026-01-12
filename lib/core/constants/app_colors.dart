@@ -32,6 +32,9 @@ class AppColors {
   /// グレージュ - サブテキスト
   static const Color greige = Color(0xFF8F8C8A);
 
+  /// ウォームベージュ - 警告・ヒント
+  static const Color warmBeige = Color(0xFFF5E6D3);
+
   // ========== ADDITIONAL ==========
 
   /// ホワイト
