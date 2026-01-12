@@ -57,6 +57,14 @@
 
 ### 1.5 認証・ユーザー管理 (Week 3-4)
 
+- [x] Supabase プロジェクト接続
+- [x] 認証サービス実装 (`auth_service.dart`)
+  - [x] メール/パスワード認証
+  - [x] マジックリンク
+  - [x] OAuth (Google, Apple) 準備
+- [x] Riverpod プロバイダー (`auth_provider.dart`)
+- [x] ログイン UI (`login_screen.dart`)
+
 - [ ] Supabase プロジェクト作成
 - [ ] 認証フローの実装
   - [ ] メールアドレス認証
