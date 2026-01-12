@@ -62,6 +62,7 @@ dependencies:
 
   # バックエンド
   supabase_flutter: ^2.8.1
+  audioplayers: ^6.5.1
 
 dev_dependencies:
   flutter_test:
